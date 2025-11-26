@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio S21S - Saia do Sedentarismo em 21 Dias | Simonia Teodoro</title>
+    <meta name="description" content="Transforme seu corpo em 21 dias com o Desafio S21S. Programa especial para mulheres 40+ com Simonia Teodoro.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* LOGO STYLES */
+        .logo-s21s {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            margin: 30px auto;
+            display: block;
+            filter: drop-shadow(0 4px 15px rgba(0,0,0,0.1));
+        }
+
+        .logo-s21s-small {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* HERO SECTION - Cores da logo: Verde, Turquesa, Amarelo */
+        .hero {
+            background: linear-gradient(135deg, #00897B 0%, #26A69A 50%, #80CBC4 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.25);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .hero .cta-button {
+            background: #CDDC39;
+            color: #2C3E50;
+            padding: 18px 50px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(205, 220, 57, 0.4);
+        }
+
+        .hero .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(205, 220, 57, 0.6);
+            background: #C0CA33;
+        }
+
+        .hero-info {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        .hero-info strong {
+            font-size: 18px;
+        }
+
+        /* PROBLEM SECTION */
+        .problem-section {
+            background: #F5F5F5;
+            padding: 80px 20px;
+        }
+
+        .problem-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #00897B;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 4px solid #26A69A;
+        }
+
+        .problem-card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .problem-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #2C3E50;
+        }
+
+        .problem-card p {
+            color: #546E7A;
+            line-height: 1.6;
+        }
+
+        /* SOLUTION SECTION */
+        .solution-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .solution-section h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #00897B;
+        }
+
+        .solution-section .intro {
+            text-align: center;
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #546E7A;
+            line-height: 1.8;
+        }
+
+        /* BENEFITS SECTION */
+        .benefits-section {
+            background: linear-gradient(135deg, #00897B 0%, #26A69A 100%);
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .benefits-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .benefit-item .check {
+            font-size: 32px;
+            color: #CDDC39;
+            flex-shrink: 0;
+        }
+
+        .benefit-item h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* WHAT'S INCLUDED SECTION */
+        .included-section {
+            padding: 80px 20px;
+            background: #F5F5F5;
+        }
+
+        .included-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #00897B;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .included-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid #CDDC39;
+        }
+
+        .included-card .icon {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .included-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #00897B;
+        }
+
+        .included-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .included-card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #546E7A;
+        }
+
+        .included-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #26A69A;
+            font-weight: bold;
+        }
+
+        /* BONUS SECTION */
+        .bonus-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .bonus-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #00897B;
+        }
+
+        .bonus-section .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #26A69A;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .bonus-card {
+            background: linear-gradient(135deg, #FFF9C4 0%, #F0F4C3 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #CDDC39;
+        }
+
+        .bonus-card .bonus-number {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #CDDC39;
+            color: #2C3E50;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .bonus-card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .bonus-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #00695C;
+        }
+
+        .bonus-card p {
+            color: #546E7A;
+            line-height: 1.6;
+        }
+
+        /* HOW IT WORKS SECTION */
+        .how-section {
+            padding: 80px 20px;
+            background: #F5F5F5;
+        }
+
+        .how-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #00897B;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: 70px;
+            bottom: -50px;
+            width: 3px;
+            background: linear-gradient(180deg, #26A69A 0%, #80CBC4 100%);
+        }
+
+        .timeline-item:last-child:before {
+            display: none;
+        }
+
+        .timeline-number {
+            background: linear-gradient(135deg, #00897B 0%, #26A69A 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0, 137, 123, 0.3);
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #00897B;
+        }
+
+        .timeline-content p {
+            color: #546E7A;
+            line-height: 1.6;
+        }
+
+        /* FOR WHO SECTION */
+        .forwho-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .forwho-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #00897B;
+        }
+
+        .forwho-section .intro {
+            text-align: center;
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #546E7A;
+        }
+
+        .forwho-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .forwho-item {
+            background: #E0F2F1;
+            padding: 25px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 4px solid #26A69A;
+        }
+
+        .forwho-item .check {
+            font-size: 28px;
+            color: #00897B;
+        }
+
+        .forwho-item p {
+            color: #00695C;
+            font-weight: 500;
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            padding: 80px 20px;
+            background: #F5F5F5;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image-placeholder {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #00897B 0%, #26A69A 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            margin: 0 auto;
+            box-shadow: 0 8px 25px rgba(0, 137, 123, 0.3);
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00897B;
+        }
+
+        .about-text h3 {
+            font-size: 20px;
+            color: #26A69A;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            color: #546E7A;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-text .highlight {
+            color: #00897B;
+            font-weight: 600;
+        }
+
+        /* PRICING SECTION */
+        .pricing-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .pricing-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #00897B;
+        }
+
+        .pricing-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #00897B 0%, #26A69A 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 137, 123, 0.3);
+        }
+
+        .pricing-badge {
+            background: #CDDC39;
+            color: #2C3E50;
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .pricing-original {
+            font-size: 24px;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .pricing-current {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .pricing-current small {
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .pricing-installments {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin: 30px 0;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #CDDC39;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .pricing-cta {
+            background: #CDDC39;
+            color: #2C3E50;
+            padding: 20px 50px;
+            font-size: 22px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(205, 220, 57, 0.4);
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(205, 220, 57, 0.6);
+            background: #C0CA33;
+        }
+
+        .pricing-guarantee {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* CTA FINAL SECTION */
+        .cta-final {
+            background: linear-gradient(135deg, #CDDC39 0%, #C0CA33 100%);
+            color: #2C3E50;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .cta-final .cta-button {
+            background: #00897B;
+            color: white;
+            padding: 20px 60px;
+            font-size: 22px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 137, 123, 0.4);
+        }
+
+        .cta-final .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 137, 123, 0.6);
+            background: #00695C;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #00695C;
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #CDDC39;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+
+        .footer-support {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .footer-support strong {
+            color: #CDDC39;
+        }
+
+        /* URGENCY BAR */
+        .urgency-bar {
+            background: #D32F2F;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .urgency-bar .highlight {
+            color: #CDDC39;
+            font-weight: 700;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero .cta-button {
+                padding: 15px 35px;
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 28px !important;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-item:before {
+                left: 30px;
+                top: 80px;
+            }
+
+            .logo-s21s {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- URGENCY BAR -->
+    <div class="urgency-bar">
+        🔥 ATENÇÃO: Vagas limitadas para a turma de Dezembro! | <span class="highlight">GARANTA JÁ A SUA!</span>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">✨ EDIÇÃO ESPECIAL PRÉ-NATAL 2025</div>
+            
+            <img src="logo-s21s.jpg" alt="Logo S21S - Saia do Sedentarismo em 21 Dias" class="logo-s21s">
+            
+            <h1>DESAFIO S21S</h1>
+            <p class="subtitle">Saia do Sedentarismo em 21 Dias</p>
+
+            <p style="font-size: 22px; margin: 30px 0;">
+                Chegue no Natal <strong>LEVE, CONFIANTE e RADIANTE</strong><br>
+                com um programa feito especialmente para mulheres 40+
+            </p>
+
+            <a href="#inscricao" class="cta-button">QUERO PARTICIPAR AGORA!</a>
+
+            <div class="hero-info">
+                📅 <strong>Início:</strong> 1º de Dezembro<br>
+                📅 <strong>Duração:</strong> 21 dias intensivos<br>
+                📍 <strong>100% Online</strong> | Treinos gravados + Grupo WhatsApp exclusivo
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>Você se Identifica com Alguma<br>Dessas Situações?</h2>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon">😰</div>
+                    <h3>Corpo Pesado e Sem Energia</h3>
+                    <p>Você acorda cansada, sente o corpo pesado e não tem disposição nem para as tarefas do dia a dia.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">😔</div>
+                    <h3>Não Sabe Por Onde Começar</h3>
+                    <p>Quer se exercitar, mas tem medo de se machucar ou fazer errado. As academias parecem intimidadoras.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">😣</div>
+                    <h3>Tentou Mil Vezes</h3>
+                    <p>Já começou várias dietas e treinos, mas desiste no meio do caminho porque parece impossível.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">⏰</div>
+                    <h3>Falta de Tempo</h3>
+                    <p>Entre trabalho, casa e família, sobra pouquíssimo tempo para cuidar de você mesma.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">🎄</div>
+                    <h3>Natal Chegando</h3>
+                    <p>As festas estão aí e você não quer se sentir desconfortável nas confraternizações.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">😞</div>
+                    <h3>Perdeu o Metabolismo</h3>
+                    <p>Acha que depois dos 40 é impossível emagrecer e que seu corpo não responde mais.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; font-size: 22px; color: #00897B; font-weight: 600;">
+                Se você se identificou com pelo menos UMA dessas situações,<br>
+                este desafio foi feito ESPECIALMENTE para você! ⬇️
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="solution-section">
+        <div class="container">
+            <h2>A Solução que Você Esperava!</h2>
+            
+            <p class="intro">
+                O <strong>Desafio S21S - Saia do Sedentarismo em 21 Dias</strong> é um programa intensivo e transformador que vai te tirar do sedentarismo de forma <strong>segura, progressiva e eficaz</strong>, respeitando as necessidades do seu corpo após os 40 anos.
+            </p>
+
+            <img src="logo-s21s.jpg" alt="Logo S21S" class="logo-s21s-small">
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>O Que Você Vai Conquistar em 21 Dias?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="check">✨</div>
+                    <div>
+                        <h3>Desinchaço Rápido</h3>
+                        <p>Perca peso inicial e sinta o corpo mais leve já nos primeiros dias do desafio.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="check">⚡</div>
+                    <div>
+                        <h3>Energia e Vitalidade</h3>
+                        <p>Acorde disposta, com energia para fazer tudo que precisa e ainda sobrar para você.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="check">💪</div>
+                    <div>
+                        <h3>Corpo Mais Forte</h3>
+                        <p>Ganhe força muscular, melhore a postura e sinta menos dores no dia a dia.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="check">😊</div>
+                    <div>
+                        <h3>Confiança Renovada</h3>
+                        <p>Sinta-se bem consigo mesma, orgulhosa da sua conquista e pronta para o Natal.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="check">🎯</div>
+                    <div>
+                        <h3>Rotina Sustentável</h3>
+                        <p>Crie hábitos saudáveis que vão continuar depois do desafio, transformando sua vida.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="check">🔥</div>
+                    <div>
+                        <h3>Metabolismo Ativo</h3>
+                        <p>Reative seu metabolismo e descubra que SIM, seu corpo ainda responde depois dos 40!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED SECTION -->
+    <section class="included-section">
+        <div class="container">
+            <h2>O Que Está Incluído no Desafio?</h2>
+            
+            <div class="included-grid">
+                <div class="included-card">
+                    <div class="icon">🎬</div>
+                    <h3>18 Treinos Gravados</h3>
+                    <ul>
+                        <li>6 treinos por semana durante 21 dias</li>
+                        <li>Duração: 25-50 minutos</li>
+                        <li>Força, Cardio e Mobilidade</li>
+                        <li>Faça no horário que preferir</li>
+                        <li>Progressão semanal adaptada</li>
+                    </ul>
+                </div>
+
+                <div class="included-card">
+                    <div class="icon">💬</div>
+                    <h3>Grupo WhatsApp VIP</h3>
+                    <ul>
+                        <li>Acompanhamento diário comigo</li>
+                        <li>Treinos enviados às 6h</li>
+                        <li>Dicas nutricionais e motivacionais</li>
+                        <li>Suporte para dúvidas</li>
+                        <li>Comunidade de apoio</li>
+                    </ul>
+                </div>
+
+                <div class="included-card">
+                    <div class="icon">🥗</div>
+                    <h3>Protocolo Nutricional ST</h3>
+                    <ul>
+                        <li>5 Pilares Nutricionais claros</li>
+                        <li>Foco em desinchaço</li>
+                        <li>Aumento de proteína</li>
+                        <li>Hidratação adequada</li>
+                        <li>Jejum noturno de 12h</li>
+                    </ul>
+                </div>
+
+                <div class="included-card">
+                    <div class="icon">📊</div>
+                    <h3>Check-in Diário</h3>
+                    <ul>
+                        <li>Acompanhamento da evolução</li>
+                        <li>Responsabilidade e compromisso</li>
+                        <li>Registro do progresso</li>
+                        <li>Motivação constante</li>
+                        <li>Reconhecimento das conquistas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BONUS SECTION -->
+    <section class="bonus-section">
+        <div class="container">
+            <h2>+ 4 Bônus Exclusivos</h2>
+            <p class="subtitle">Materiais que vão potencializar seus resultados!</p>
+            
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-number">1</div>
+                    <div class="icon">📚</div>
+                    <h3>Biblioteca de Vídeos<br>dos Exercícios ST</h3>
+                    <p>Vídeos curtos demonstrando a técnica correta de cada exercício. Acesso PERMANENTE para consultar sempre que precisar!</p>
+                </div>
+
+                <div class="bonus-card">
+                    <div class="bonus-number">2</div>
+                    <div class="icon">📖</div>
+                    <h3>Guia Rápido de<br>Alimentação ST</h3>
+                    <p>PDF completo com 18 ideias práticas de refeições + lista de compras + dicas de preparo para facilitar sua rotina.</p>
+                </div>
+
+                <div class="bonus-card">
+                    <div class="bonus-number">3</div>
+                    <div class="icon">✅</div>
+                    <h3>Checklist Diário<br>"Meus 21 Dias Leve"</h3>
+                    <p>Rastreador visual para você imprimir e marcar diariamente: treino, água, proteína, check-in + espaço para medidas.</p>
+                </div>
+
+                <div class="bonus-card">
+                    <div class="bonus-number">4</div>
+                    <div class="icon">📏</div>
+                    <h3>Protocolo ST<br>de Medidas</h3>
+                    <p>Vídeo + PDF mostrando como tirar medidas corretamente para acompanhar sua evolução REAL durante o desafio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-section">
+        <div class="container">
+            <h2>Como Funciona o Desafio?</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Inscrição e Preparação</h3>
+                        <p>Após se inscrever, você recebe os 4 bônus digitais, entra no grupo WhatsApp exclusivo e recebe todas as orientações para começar preparada!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Dia 1 - Começamos! (1º de Dezembro)</h3>
+                        <p>Boas-vindas oficial, orientação para tirar suas medidas e fotos iniciais. Você recebe o primeiro treino gravado e faz seu primeiro check-in!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Rotina Diária (Segunda a Sábado)</h3>
+                        <p><strong>6h:</strong> Treino gravado enviado no grupo<br>
+                        <strong>12h:</strong> Dica nutricional ou motivacional<br>
+                        <strong>18h:</strong> Mensagem de motivação<br>
+                        <strong>21h:</strong> Deadline para check-in</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Domingos = Descanso Total</h3>
+                        <p>Domingo é dia de recuperação! Momento de reflexão, celebração das conquistas da semana e preparação para a próxima.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Dia 11 - Meio do Caminho!</h3>
+                        <p>Você tira medidas intermediárias e celebramos juntas as conquistas. É hora de reconhecer o quanto você já evoluiu!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">6</div>
+                    <div class="timeline-content">
+                        <h3>Dia 21 - Finalização! (21 de Dezembro)</h3>
+                        <p>Medidas e fotos finais, compartilhamento de resultados, depoimentos e celebração da sua TRANSFORMAÇÃO! 🎉</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR WHO SECTION -->
+    <section class="forwho-section">
+        <div class="container">
+            <h2>Este Desafio é Para Você Se...</h2>
+            
+            <p class="intro">
+                Este programa foi desenvolvido ESPECIALMENTE pensando em mulheres 40+ que:
+            </p>
+
+            <div class="forwho-grid">
+                <div class="forwho-item">
+                    <div class="check">✓</div>
+                    <p>Está sedentária ou iniciante em exercícios</p>
+                </div>
+
+                <div class="forwho-item">
+                    <div class="check">✓</div>
+                    <p>Quer resultados rápidos mas sustentáveis</p>
+                </div>
+
+                <div class="forwho-item">
+                    <div class="check">✓</div>
+                    <p>Precisa de acompanhamento e motivação</p>
+                </div>
+
+                <div class="forwho-item">
+                    <div class="check">✓</div>
+                    <p>Quer treinar em casa, no seu horário</p>
+                </div>
+
+                <div class="forwho-item">
+                    <div class="check">✓</div>
+                    <p>Busca segurança e respeito ao corpo 40+</p>
+                </div>
+
+                <div class="forwho-item">
+                    <div class="check">✓</div>
+                    <p>Quer chegar leve e confiante no Natal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-placeholder">👩🏾‍⚕️</div>
+                </div>
+                <div class="about-text">
+                    <h2>Quem é Simonia Teodoro?</h2>
+                    <h3>Educadora Física Especialista em Mulheres 40+</h3>
+                    <p>
+                        Olá! Eu sou a Simonia Teodoro, Educadora Física apaixonada por transformar vidas através do movimento.
+                    </p>
+                    <p>
+                        <span class="highlight">Minha história:</span> Sempre fui vendedora, mas cansada de não ter resultado, decidi fazer educação física. Foi quando comecei a dar aula e descobri que não era isso. Comecei a fazer bacharel em Ed. Física e aí sim me encontrei!
+                    </p>
+                    <p>
+                        <span class="highlight">Meu diferencial?</span> Eu AMO o que eu faço! E isso faz toda diferença no resultado das minhas alunas. Trabalho com energia, criatividade e muita dedicação.
+                    </p>
+                    <p>
+                        Criei o <strong>Desafio S21S</strong> para levar saúde e bem-estar através da atividade física para o máximo de mulheres 40+ possível. Minha missão é tirar você do sedentarismo de forma <span class="highlight">animada, divertida, criativa e prestativa</span>!
+                    </p>
+                    <p style="color: #00897B; font-weight: 600; margin-top: 20px;">
+                        Vem comigo nessa jornada de transformação! 💚
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing-section" id="inscricao">
+        <div class="container">
+            <h2>Investimento no Seu Bem-Estar</h2>
+            
+            <div class="pricing-card">
+                <div class="pricing-badge">🔥 OFERTA ESPECIAL DE LANÇAMENTO</div>
+                
+                <p style="font-size: 18px; margin-bottom: 20px;">Condição especial para as primeiras inscritas!</p>
+                
+                <div class="pricing-original">De R$ 197,00 por:</div>
+                
+                <div class="pricing-current">
+                    <small>R$</small> 147<small>,00</small>
+                </div>
+                
+                <div class="pricing-installments">
+                    ou 3x de R$ 52,33 no cartão
+                </div>
+
+                <ul class="pricing-features">
+                    <li>18 Treinos Completos Gravados</li>
+                    <li>Grupo WhatsApp VIP com Acompanhamento Diário</li>
+                    <li>Protocolo Nutricional ST</li>
+                    <li>4 Bônus Digitais Exclusivos</li>
+                    <li>Check-in Diário Obrigatório</li>
+                    <li>21 Dias de Transformação</li>
+                    <li>Acesso PERMANENTE aos vídeos técnicos</li>
+                    <li>Suporte direto comigo durante todo o desafio</li>
+                </ul>
+
+                <a href="https://wa.me/5527999756871?text=Oi%20Simonia!%20Quero%20participar%20do%20Desafio%20S21S!" class="pricing-cta">
+                    GARANTIR MINHA VAGA AGORA!
+                </a>
+
+                <p class="pricing-guarantee">
+                    ✓ Vagas Limitadas<br>
+                    ✓ Início: 1º de Dezembro de 2025<br>
+                    ✓ Pagamento 100% Seguro
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Você Merece se Sentir Bem<br>no Seu Corpo!</h2>
+            <p>
+                Não deixe para depois.<br>
+                Comece AGORA sua transformação!
+            </p>
+            <a href="https://wa.me/5527999756871?text=Oi%20Simonia!%20Quero%20participar%20do%20Desafio%20S21S!" class="cta-button">
+                QUERO GARANTIR MINHA VAGA!
+            </a>
+            <p style="margin-top: 30px; font-size: 16px;">
+                📅 Início: 1º de Dezembro | ⏰ Vagas Limitadas | 🔥 Aproveite a Condição Especial!
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="logo-s21s.jpg" alt="Logo S21S" class="logo-s21s-small">
+            </div>
+            
+            <p><strong>Simonia Teodoro</strong></p>
+            <p>Educadora Física Especialista em Mulheres 40+</p>
+            <p style="margin-top: 20px;">
+                📱 WhatsApp: <a href="https://wa.me/5527999756871">(27) 99975-6871</a><br>
+                📍 Instagram: <a href="https://instagram.com/simonia_teodoro">@simonia_teodoro</a>
+            </p>
+            
+            <div class="footer-support">
+                <p>Este projeto conta com o apoio de:</p>
+                <p><strong>Giz Marketing Digital</strong></p>
+                <p style="font-size: 12px; margin-top: 10px;">Marketing estratégico para profissionais da saúde e bem-estar</p>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 14px; opacity: 0.8;">
+                © 2025 Simonia Teodoro - Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
